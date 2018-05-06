@@ -1,0 +1,12 @@
+package at.refugeescode.rpi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RpiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RpiApplication.class, args);
+	}
+}
