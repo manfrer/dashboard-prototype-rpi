@@ -20,11 +20,11 @@ import java.util.stream.Stream;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Value("${my.username}")
-    private String username;
+//    @Value("${my.username}")
+    private String username = "nana";
 
-    @Value("${my.password}")
-    private String password;
+//    @Value("${my.password}")
+    private String password="123";
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

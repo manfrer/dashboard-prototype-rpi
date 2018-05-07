@@ -1,4 +1,4 @@
-package at.refugeescode.rpi.persistence.view;
+package at.refugeescode.rpi.view;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

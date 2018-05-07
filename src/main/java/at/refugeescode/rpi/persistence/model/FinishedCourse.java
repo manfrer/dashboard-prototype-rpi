@@ -5,6 +5,14 @@ public class FinishedCourse {
     private String courseId;
     private String userId;
 
+    public FinishedCourse() {
+    }
+
+    public FinishedCourse(String courseId, String userId) {
+        this.courseId = courseId;
+        this.userId = userId;
+    }
+
     public String getId() {
         return id;
     }

@@ -7,6 +7,14 @@ public class EnrolledCourse {
     private String courseId;
     private String userId;
 
+    public EnrolledCourse() {
+    }
+
+    public EnrolledCourse(String courseId, String userId) {
+        this.courseId = courseId;
+        this.userId = userId;
+    }
+
     public String getId() {
         return id;
     }

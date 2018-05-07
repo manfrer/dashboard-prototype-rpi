@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Course {
     @Id
     private String id;
-    private String moodleId;
+    private String moodleCourseId;
     private String name;
 
     public String getId() {
@@ -18,12 +18,12 @@ public class Course {
         this.id = id;
     }
 
-    public String getMoodleId() {
-        return moodleId;
+    public String getMoodleCourseId() {
+        return moodleCourseId;
     }
 
-    public void setMoodleId(String moodleId) {
-        this.moodleId = moodleId;
+    public void setMoodleCourseId(String moodleCourseId) {
+        this.moodleCourseId = moodleCourseId;
     }
 
     public String getName() {
@@ -38,7 +38,7 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "id='" + id + '\'' +
-                ", moodleId='" + moodleId + '\'' +
+                ", moodleCourseId='" + moodleCourseId + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }
