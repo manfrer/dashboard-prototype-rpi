@@ -2,53 +2,60 @@ package at.refugeescode.rpi.controller;
 
 import at.refugeescode.rpi.persistence.model.EnrolledCourse;
 import at.refugeescode.rpi.persistence.model.FinishedCourse;
-import at.refugeescode.rpi.persistence.repository.CourseRepository;
 import at.refugeescode.rpi.persistence.repository.EnrolledCourseRepository;
 import at.refugeescode.rpi.persistence.repository.FinishedCourseRepository;
-import at.refugeescode.rpi.persistence.repository.UserReposirory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CourseController {
-    private CourseRepository courseRepo;
-    private UserReposirory userRepo;
+
     private EnrolledCourseRepository enrolledRepo;
     private FinishedCourseRepository finishedRepo;
+    private UserCourseValidator validator;
 
-    public CourseController(CourseRepository courseRepo, UserReposirory userRepo, EnrolledCourseRepository enrolledRepo, FinishedCourseRepository finishedRepo) {
-        this.courseRepo = courseRepo;
-        this.userRepo = userRepo;
+    public CourseController(EnrolledCourseRepository enrolledRepo, FinishedCourseRepository finishedRepo, UserCourseValidator validator) {
         this.enrolledRepo = enrolledRepo;
         this.finishedRepo = finishedRepo;
+        this.validator = validator;
     }
 
-    public void enrolled(String moodleCourseId, String moodleId) {
-        if (!userRepo.findBymoodleId(moodleId).isPresent()){
-            System.out.println("User does not Exist");
-            return;
-        }
-        if (!courseRepo.findBymoodleCourseId(moodleCourseId).isPresent()){
-            System.out.println("Course does not Exist");
-            return;
+    public String enrolled(String moodleCourseId, String moodleId) {
+        if (!validator.isMoodleInfoExist(moodleId, moodleCourseId)) {
+            return "Cannot find User Or Course";
         }
 
-        String userId = userRepo.findBymoodleId(moodleId).get().getId();
-        String courseId = courseRepo.findBymoodleCourseId(moodleCourseId).get().getId();
-        enrolledRepo.save(new EnrolledCourse(courseId,userId));
+        String userId = validator.getUserId(moodleId);
+        String courseId = validator.getCourseId(moodleCourseId);
+
+        if (validator.isEnrolled(courseId, userId)) {
+            return "User already Enrolled in this Course!";
+        }
+
+        enrolledRepo.save(new EnrolledCourse(courseId, userId));
+
+        return "Success.";
     }
 
-    public void finished(String moodleCourseId, String moodleId) {
-        if (!userRepo.findBymoodleId(moodleId).isPresent()){
-            System.out.println("User does not Exist");
-            return;
-        }
-        if (!courseRepo.findBymoodleCourseId(moodleCourseId).isPresent()){
-            System.out.println("Course does not Exist");
-            return;
+    public String finished(String moodleCourseId, String moodleId) {
+        if (!validator.isMoodleInfoExist(moodleId, moodleCourseId)) {
+            return "Cannot find User Or Course";
         }
 
-        String userId = userRepo.findBymoodleId(moodleId).get().getId();
-        String courseId = courseRepo.findBymoodleCourseId(moodleCourseId).get().getId();
-        finishedRepo.save(new FinishedCourse(courseId,userId));
+        String userId = validator.getUserId(moodleId);
+        String courseId = validator.getCourseId(moodleCourseId);
+
+        if (validator.isFinished(courseId, userId)) {
+            return "User already Finished this Course!";
+        }
+
+        if (!validator.isEnrolled(courseId, userId)) {
+            return "User isn't Enrolled in this Course!";
+        }
+
+        enrolledRepo.deleteById(userId);
+
+        finishedRepo.save(new FinishedCourse(courseId, userId));
+
+        return "Success.";
     }
 }

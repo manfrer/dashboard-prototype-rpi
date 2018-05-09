@@ -1,58 +1,54 @@
 package at.refugeescode.rpi.controller;
 
 import at.refugeescode.rpi.persistence.model.User;
-import at.refugeescode.rpi.persistence.repository.UserReposirory;
+import at.refugeescode.rpi.persistence.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Optional;
-
 @Service
 public class MoodleController {
     private RestTemplate rest;
-    private UserReposirory userRepo;
-    //TODO: Read userId from Session.
-    private String userId;
+    private UserRepository userRepo;
 
     @Value("${moodle.url}")
     private String moodleUrl;
 
-    public MoodleController(RestTemplate rest, UserReposirory userRepo) {
+    public MoodleController(RestTemplate rest, UserRepository userRepo) {
         this.rest = rest;
         this.userRepo = userRepo;
     }
 
-    public void createNewAccount() {
-        StringBuilder queryBuilder = builderQuery();
-        if (queryBuilder == null) return;
+    //@Secured("hasAuthority('USER')")
+    public void createNewAccount(String username) {
 
-        String url = moodleUrl + queryBuilder;
+        User user = userRepo.findByUsername(username).get();
+
+        String query = buildQuery(user);
+
+        String url = moodleUrl + query;
+
         String moodleId = rest.getForObject(url, String.class);
 
-        addMoodleIdToTheUser(moodleId);
+        setMoodleId(user, moodleId);
     }
 
-    private void addMoodleIdToTheUser(String moodleId) {
-        User user = userRepo.findById(userId).get();
+    private void setMoodleId(User user, String moodleId) {
         user.setMoodleId(moodleId);
-        userRepo.save(user);
+        User savedUser = userRepo.save(user);
+        System.out.println(savedUser);
     }
 
-    private StringBuilder builderQuery() {
-        Optional<User> user = userRepo.findById(userId);
-        if (!user.isPresent()){
-            return null;
-        }
+    private String buildQuery(User user)  {
         StringBuilder queryBuilder = new StringBuilder();
         queryBuilder.append("?userName=");
-        queryBuilder.append(user.get().getUserName());
+        queryBuilder.append(user.getUsername());
         queryBuilder.append("&firstName=");
-        queryBuilder.append(user.get().getFirstName());
+        queryBuilder.append(user.getFirstName());
         queryBuilder.append("&lastName=");
-        queryBuilder.append(user.get().getLastName());
+        queryBuilder.append(user.getLastName());
         queryBuilder.append("&email=");
-        queryBuilder.append(user.get().getEmail());
-        return queryBuilder;
+        queryBuilder.append(user.getEmail());
+        return queryBuilder.toString();
     }
 }

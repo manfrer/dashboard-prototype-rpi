@@ -1,36 +1,29 @@
 package at.refugeescode.rpi.configuration;
 
-import org.springframework.beans.factory.annotation.Value;
+import at.refugeescode.rpi.security.UserDetailsServiceImp;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-//    @Value("${my.username}")
-    private String username = "nana";
-
-//    @Value("${my.password}")
-    private String password="123";
+    @Autowired
+    private UserDetailsServiceImp userDetailsService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/login/register").permitAll()
+                .antMatchers("/webhook").permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and()
                 .formLogin().loginPage("/login").failureUrl("/login?error").permitAll()
@@ -43,12 +36,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder encoder) {
-        List<UserDetails> users = Stream.of(
-                User.withUsername(username).password(encoder.encode(password)).roles("USER").build()
-        ).collect(Collectors.toList());
-        return new InMemoryUserDetailsManager(users);
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(authenticationProvider());
     }
 
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authProvider
+                = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
+    }
 }

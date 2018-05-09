@@ -17,6 +17,7 @@ public class CourseEndpoint {
         this.courseController = courseController;
     }
 
+
     @RequestMapping(params = {"course_status", "course_id", "moodle_id"}, method = GET)
     void getCourseStatus(@RequestParam("course_status") String courseStatus,
                          @RequestParam("course_id") String moodleCourseId,
@@ -27,7 +28,7 @@ public class CourseEndpoint {
         if (courseStatus.contains("finished")) {
             courseController.finished(moodleCourseId, moodleId);
         }
-
+        System.out.println(courseStatus + moodleCourseId + moodleId);
     }
 
     @GetMapping

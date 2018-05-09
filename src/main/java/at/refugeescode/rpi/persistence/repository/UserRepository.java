@@ -5,6 +5,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
 
-public interface UserReposirory extends MongoRepository<User, String>{
-    Optional<User> findBymoodleId(String moodleId);
+public interface UserRepository extends MongoRepository<User, String>{
+
+    Optional<User> findByMoodleId(String moodleId);
+
+    Optional<User> findByUsername(String username);
 }

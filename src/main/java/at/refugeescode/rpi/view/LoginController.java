@@ -26,8 +26,11 @@ public class LoginController {
     String newUser(User user) {
         System.out.println(user);
         User savedNewUser = userController.addNew(user);
+        if (savedNewUser == null) {
+            return "redirect:/login?userexist";
+        }
         System.out.println(savedNewUser);
-        return "redirect:/login";
+        return "redirect:/login?register";
     }
 
     @GetMapping
