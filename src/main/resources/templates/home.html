@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        <center>
+            <div th:if="${param.error}" class="alert alert-danger fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Error!</strong> There was an error, please try again.
+            </div>
+            <div th:if="${param.addednew}" class="alert alert-success fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> You registered in MoodleBox.
+            </div>
+            <br/>
+            <br/>
+            <form th:action="@{/}" method="post">
+                <h3>Register in Moodle</h3>
+                <br/>
+                <input type="submit" value="Register"/>
+            </form>
+        </center>
+    </body>
 </html>

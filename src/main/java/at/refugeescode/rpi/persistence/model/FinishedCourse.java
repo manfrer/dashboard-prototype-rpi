@@ -1,6 +1,11 @@
 package at.refugeescode.rpi.persistence.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class FinishedCourse {
+    @Id
     private String id;
     private String courseId;
     private String userId;

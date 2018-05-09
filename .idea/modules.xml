@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/rpi.iml" filepath="$PROJECT_DIR$/rpi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dashboard-prototype-rpi.iml" filepath="$PROJECT_DIR$/.idea/dashboard-prototype-rpi.iml" />
     </modules>
   </component>
 </project>

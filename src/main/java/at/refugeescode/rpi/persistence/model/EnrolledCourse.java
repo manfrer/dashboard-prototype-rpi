@@ -1,8 +1,11 @@
 package at.refugeescode.rpi.persistence.model;
 
-import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 public class EnrolledCourse {
+    @Id
     private String id;
     private String courseId;
     private String userId;

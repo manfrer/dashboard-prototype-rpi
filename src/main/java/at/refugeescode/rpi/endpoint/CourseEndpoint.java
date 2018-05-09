@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
+@RequestMapping("/webhook")
 public class CourseEndpoint {
     private CourseController courseController;
 
     public CourseEndpoint(CourseController courseController) {
         this.courseController = courseController;
     }
+
 
     @RequestMapping(params = {"course_status", "course_id", "moodle_id"}, method = GET)
     void getCourseStatus(@RequestParam("course_status") String courseStatus,
@@ -26,7 +28,7 @@ public class CourseEndpoint {
         if (courseStatus.contains("finished")) {
             courseController.finished(moodleCourseId, moodleId);
         }
-
+        System.out.println(courseStatus + moodleCourseId + moodleId);
     }
 
     @GetMapping
