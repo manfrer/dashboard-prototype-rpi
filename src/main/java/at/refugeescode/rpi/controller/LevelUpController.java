@@ -12,7 +12,7 @@ public class LevelUpController {
     @Value("${level.threshold}")
     private Integer levelThreshold;
 
-    @Value("${gained.points}")
+    @Value("${gainedpoints}")
     private Integer gainedPoints;
 
     public LevelUpController(UserRepository userRepository) {

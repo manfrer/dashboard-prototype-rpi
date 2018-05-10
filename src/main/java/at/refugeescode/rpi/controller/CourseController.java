@@ -62,5 +62,6 @@ private LevelUpController levelUpController;
         levelUpController.earnXp(userId);
 
         return "Success.";
+        //TODO: Save in History DB
     }
 }
