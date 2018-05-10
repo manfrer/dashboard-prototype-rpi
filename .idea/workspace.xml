@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd8153c-8c56-4ead-8453-75af26a3ea71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserCourseValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/security/UserDetailsServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/security/UserPrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/configuration/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/configuration/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/CourseEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/CourseEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/EnrolledCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/EnrolledCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/FinishedCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/FinishedCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/EnrolledCourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/EnrolledCourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/FinishedCourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/FinishedCourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/UserReposirory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="8fd8153c-8c56-4ead-8453-75af26a3ea71" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
