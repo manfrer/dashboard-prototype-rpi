@@ -12,11 +12,13 @@ public class CourseController {
     private EnrolledCourseRepository enrolledRepo;
     private FinishedCourseRepository finishedRepo;
     private UserCourseValidator validator;
+    private LevelUpController levelUpController;
 
-    public CourseController(EnrolledCourseRepository enrolledRepo, FinishedCourseRepository finishedRepo, UserCourseValidator validator) {
+    public CourseController(EnrolledCourseRepository enrolledRepo, FinishedCourseRepository finishedRepo, UserCourseValidator validator, LevelUpController levelUpController) {
         this.enrolledRepo = enrolledRepo;
         this.finishedRepo = finishedRepo;
         this.validator = validator;
+        this.levelUpController = levelUpController;
     }
 
     public String enrolled(String moodleCourseId, String moodleId) {
@@ -52,9 +54,12 @@ public class CourseController {
             return "User isn't Enrolled in this Course!";
         }
 
+
         enrolledRepo.deleteById(userId);
 
         finishedRepo.save(new FinishedCourse(courseId, userId));
+
+        levelUpController.earnXp(userId);
 
         return "Success.";
     }

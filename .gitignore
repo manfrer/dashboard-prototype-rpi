@@ -11,6 +11,7 @@
 .sts4-cache
 
 ### IntelliJ IDEA ###
+.idea/workspace.xml
 .idea
 .idea/workspace.xml
 *.iws
