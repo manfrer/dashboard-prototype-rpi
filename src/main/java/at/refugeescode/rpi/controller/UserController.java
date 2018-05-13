@@ -22,4 +22,8 @@ public class UserController {
         user.setPassword(encoder.encode(user.getPassword()));
         return userRepo.save(user);
     }
+
+    public User getUser(String username) {
+        return userRepo.findByUsername(username).get();
+    }
 }

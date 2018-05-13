@@ -47,4 +47,8 @@ public class UserCourseValidator {
     public boolean isFinished(String courseId, String userId) {
         return finishedRepo.existsByCourseIdAndUserId(courseId, userId);
     }
+
+    public String getUserIdByUsername(String username) {
+        return userRepo.findByUsername(username).get().getId();
+    }
 }
