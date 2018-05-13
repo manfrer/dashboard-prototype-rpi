@@ -51,6 +51,6 @@ public class HomeController {
 
     @GetMapping
     String page() {
-        return "home";
+        return "_home";
     }
 }

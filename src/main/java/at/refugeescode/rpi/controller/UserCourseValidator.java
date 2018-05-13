@@ -13,7 +13,10 @@ public class UserCourseValidator {
     private EnrolledCourseRepository enrolledRepo;
     private FinishedCourseRepository finishedRepo;
 
-    public UserCourseValidator(CourseRepository courseRepo, UserRepository userRepo, EnrolledCourseRepository enrolledRepo, FinishedCourseRepository finishedRepo) {
+    public UserCourseValidator(CourseRepository courseRepo,
+                               UserRepository userRepo,
+                               EnrolledCourseRepository enrolledRepo,
+                               FinishedCourseRepository finishedRepo) {
         this.courseRepo = courseRepo;
         this.userRepo = userRepo;
         this.enrolledRepo = enrolledRepo;

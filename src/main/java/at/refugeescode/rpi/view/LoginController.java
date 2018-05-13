@@ -30,7 +30,7 @@ public class LoginController {
             return "redirect:/login?userexist";
         }
         System.out.println(savedNewUser);
-        return "redirect:/login?register";
+        return "redirect:/login";
     }
 
     @GetMapping
