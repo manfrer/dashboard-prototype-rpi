@@ -23,7 +23,7 @@ public class CourseController {
     private CourseRepository courseRepo;
     private UserCourseValidator validator;
     private LevelUpController levelUpController;
-private HistoryRepository historyRepo;
+    private HistoryRepository historyRepo;
 
     public CourseController(EnrolledCourseRepository enrolledRepo,
                             FinishedCourseRepository finishedRepo,

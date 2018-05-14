@@ -44,7 +44,6 @@ public class HomeController {
 
     @PostMapping("/")
     String createMoodleAcouunt(Principal principal) {
-        System.out.println(principal);
         moodleController.createNewAccount(principal.getName());
         return "redirect:/?addednew";
     }

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f61c7d4-1b84-4a25-9e21-830cd09b9ad1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/MoodleSimulatorEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/LevelUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/LevelUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_home.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,40 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding>
-                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#footer#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="111" column="62" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="62" />
-              <folding>
-                <element signature="e#1816#1817#0" expanded="true" />
-                <element signature="e#1858#1859#0" expanded="true" />
-                <element signature="e#1929#1930#0" expanded="true" />
-                <element signature="e#1991#1992#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
               <folding>
                 <element signature="e#1150#1151#0" expanded="true" />
                 <element signature="e#1216#1217#0" expanded="true" />
@@ -65,37 +34,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="MoodleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="210">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoodleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java">
+      <file leaf-file-name="MoodleSimulatorEndpoint.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/MoodleSimulatorEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="189">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding>
-                <element signature="method#setMoodleId#0;class#MoodleController#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/CourseEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" column="53" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,13 +73,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/persistence/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/MoodleSimulatorEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/LevelUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java" />
       </list>
     </option>
   </component>
@@ -175,26 +144,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rpi" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboard-prototype-rpi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboard-prototype-rpi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi" type="462c0819:PsiDirectoryNode" />
               <item name="endpoint" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard-prototype-rpi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpi" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard-prototype-rpi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rpi" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpi" type="b2602c69:ProjectViewProjectNode" />
@@ -337,9 +305,9 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.59887004" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26271185" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.5762712" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
@@ -380,13 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="122" column="37" lean-forward="true" selection-start-line="122" selection-start-column="37" selection-end-line="122" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -406,21 +367,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="399">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -437,17 +399,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/LevelUpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="10" />
+        <state relative-caret-position="189">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2289">
+          <caret line="122" column="37" selection-start-line="122" selection-start-column="37" selection-end-line="122" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/CourseEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/UserCourseValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/view/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
           <folding>
             <element signature="e#1150#1151#0" expanded="true" />
             <element signature="e#1216#1217#0" expanded="true" />
@@ -455,31 +456,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/CourseEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/controller/MoodleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="method#setMoodleId#0;class#MoodleController#0" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/refugeescode/rpi/endpoint/MoodleSimulatorEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="189">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

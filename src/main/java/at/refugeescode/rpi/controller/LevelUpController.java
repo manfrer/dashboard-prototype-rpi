@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 public class LevelUpController {
     private UserRepository userRepository;
 
-    //@Value("${levelthreshold}")
-    private Integer levelThreshold=10;
+    @Value("${levelthreshold}")
+    private Integer levelThreshold;
 
-    //@Value("${gainedpoints}")
-    private Integer gainedPoints=15;
+    @Value("${gainedpoints}")
+    private Integer gainedPoints;
 
     public LevelUpController(UserRepository userRepository) {
         this.userRepository = userRepository;

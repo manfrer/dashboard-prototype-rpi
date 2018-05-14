@@ -27,9 +27,9 @@ public class MoodleController {
         String query = buildQuery(user);
 
         String url = moodleUrl + query;
-
+        System.out.println("url = " + url);
         String moodleId = rest.getForObject(url, String.class);
-
+        System.out.println("moodleId = " + moodleId);
         setMoodleId(user, moodleId);
     }
 
@@ -39,7 +39,7 @@ public class MoodleController {
         user.setXp(10);
         user.setLevel(1);
         User savedUser = userRepo.save(user);
-        System.out.println(savedUser);
+        System.out.println("-------" + savedUser + "-------");
     }
 
     private String buildQuery(User user)  {
