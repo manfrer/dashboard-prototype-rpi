@@ -9,6 +9,7 @@ import at.refugeescode.rpi.persistence.repository.FinishedCourseRepository;
 import at.refugeescode.rpi.persistence.repository.HistoryRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -118,6 +119,8 @@ private HistoryRepository historyRepo;
     }
 
     private List<String> getCoursesName(List<EnrolledCourse> courses) {
+        if (courses.isEmpty())
+            return new ArrayList<>();
         return Stream.of(courses)
                 .map(course -> course.get(0).getCourseId())
                 .map(courseId -> courseRepo.findById(courseId))

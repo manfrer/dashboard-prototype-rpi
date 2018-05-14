@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Add icon library -->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <!--<link rel="stylesheet" th:href="@{/css/loginstyle.css}"/>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/loginstyle.css}"/>
 </head>
 <body>
 <form th:action="@{/login}" method="post" style="max-width:500px;margin:auto">
@@ -36,61 +36,61 @@
     <button type="submit" class="btn">Login</button>
 </form>
 
-<!--<br/><br/>-->
-<!--<div class=" signin" style="max-width:500px;margin:auto">-->
-    <!--<br/>-->
-    <!--&lt;!&ndash;<p>Don't have an account? <a href="#">Register</a>.</p>&ndash;&gt;-->
-    <!--<p>Don't have an account?-->
-        <!--<button onclick="document.getElementById('id01').style.display='block'" class="btn" style="width:auto;">-->
-            <!--Register-->
-        <!--</button>-->
-    <!--</p>-->
-    <!--<br/>-->
-<!--</div>-->
+<br/><br/>
+<div class=" signin" style="max-width:500px;margin:auto">
+    <br/>
+    <!--<p>Don't have an account? <a href="#">Register</a>.</p>-->
+    <p>Don't have an account?
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn" style="width:auto;">
+            Register
+        </button>
+    </p>
+    <br/>
+</div>
 
 
-<!--<div id="id01" class="modal">-->
-    <!--<span onclick="document.getElementById('id01').style.display='none'" class="close"-->
-          <!--title="Close Modal">&times;</span>-->
-    <!--<form class="modal-content" th:object="${newUser}" th:action="@{/login/register}" method="post">-->
-        <!--<div class="container">-->
-            <!--<h1>Sign Up</h1>-->
-            <!--<p>Please fill in this form to create an account.</p>-->
-            <!--<hr>-->
-            <!--<input class="modalinput" type="text" placeholder="Enter First Name" name="firstName"-->
-                   <!--th:field="*{firstName}" required>-->
-            <!--<input class="modalinput" type="text" placeholder="Enter Last Name" name="lastName" th:field="*{lastName}"-->
-                   <!--required>-->
-            <!--<input class="modalinput" type="text" placeholder="Enter Username" name="username" th:field="*{username}"-->
-                   <!--required>-->
-            <!--<input class="modalinput" type="password" placeholder="Enter Password" name="password"-->
-                   <!--th:field="*{password}" required>-->
-            <!--<input class="modalinput" type="text" placeholder="Enter Email" name="email" th:field="*{email}" required>-->
-            <!--&lt;!&ndash;<label>&ndash;&gt;-->
-            <!--&lt;!&ndash;<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me&ndash;&gt;-->
-            <!--&lt;!&ndash;</label>&ndash;&gt;-->
-            <!--<div class="clearfix">-->
-                <!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">-->
-                    <!--Cancel-->
-                <!--</button>-->
-                <!--<button type="submit" class="signupbtn">Sign Up</button>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</form>-->
-<!--</div>-->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+    <form class="modal-content" th:object="${newUser}" th:action="@{/login/register}" method="post">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <input class="modalinput" type="text" placeholder="Enter First Name" name="firstName"
+                   th:field="*{firstName}" required>
+            <input class="modalinput" type="text" placeholder="Enter Last Name" name="lastName" th:field="*{lastName}"
+                   required>
+            <input class="modalinput" type="text" placeholder="Enter Username" name="username" th:field="*{username}"
+                   required>
+            <input class="modalinput" type="password" placeholder="Enter Password" name="password"
+                   th:field="*{password}" required>
+            <input class="modalinput" type="text" placeholder="Enter Email" name="email" th:field="*{email}" required>
+            <!--<label>-->
+            <!--<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me-->
+            <!--</label>-->
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+                    Cancel
+                </button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
 
-<!--<script>-->
-<!--// Get the modal-->
-<!--var modal = document.getElementById('id01');-->
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
-<!--// When the user clicks anywhere outside of the modal, close it-->
-<!--window.onclick = function(event) {-->
-    <!--if (event.target == modal) {-->
-        <!--modal.style.display = "none";-->
-    <!--}-->
-<!--}-->
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
-<!--</script>-->
+</script>
 
 </body>
 </html>

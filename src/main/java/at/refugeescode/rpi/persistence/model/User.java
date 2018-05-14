@@ -15,6 +15,7 @@ public class User {
     private String email;
     private Integer xp;
     private Integer level;
+    private boolean moodleBoxRegistered;
 
     public String getId() {
         return id;
@@ -88,6 +89,14 @@ public class User {
         this.level = level;
     }
 
+    public boolean isMoodleBoxRegistered() {
+        return moodleBoxRegistered;
+    }
+
+    public void setMoodleBoxRegistered(boolean moodleBoxRegistered) {
+        this.moodleBoxRegistered = moodleBoxRegistered;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -100,6 +109,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", xp=" + xp +
                 ", level=" + level +
+                ", moodleBoxRegistered=" + moodleBoxRegistered +
                 '}';
     }
 }

@@ -35,6 +35,9 @@ public class MoodleController {
 
     private void setMoodleId(User user, String moodleId) {
         user.setMoodleId(moodleId);
+        user.setMoodleBoxRegistered(true);
+        user.setXp(10);
+        user.setLevel(1);
         User savedUser = userRepo.save(user);
         System.out.println(savedUser);
     }

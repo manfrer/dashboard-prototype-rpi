@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>
+       Dashboard
+    </title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/picons-essentials/71/dashboard-512.png" type="image/png" sizes="48x48">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 <body class="w3-theme-l5">
 
 <!-- Navbar -->
@@ -16,7 +19,7 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
            href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
-                class="fa fa-home w3-margin-right"></i>Logo</a>
+                class="fa fa-home w3-margin-right"></i>MoodleBod-Dashboard</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
                 class="fa fa-globe"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
@@ -51,7 +54,10 @@
             <!-- Profile -->
             <div class="w3-card w3-round w3-white">
                 <div class="w3-container">
-                    <h4 class="w3-center" th:text="${user.firstName} ${user.lastName}}">Nisreen</h4>
+                    <h4 class="w3-center">
+                        <span th:text="${user.firstName}">Nisreen</span>
+                        <span th:text="${user.lastName}">Nisreen</span>
+                    </h4>
                     <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle"
                                               style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
@@ -103,14 +109,14 @@
             <br>
 
             <!-- Alert Box -->
-            <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
+            <div th:if="${user.moodleBoxRegistered==false}" class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+            <i class="fa fa-remove"></i>
+            </span>
                 <p><strong>Hey!</strong></p>
 
                 <form th:action="@{/}" method="post">
-                    <p>For register in moodle Use this Button.</p>
+                    <p>For registeration in moodle use this button.</p>
                     <button type="submit" class="w3-button w3-block w3-theme-l1">Register</button>
                 </form>
                 <br/>
@@ -126,17 +132,17 @@
             <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
                 <div th:if="${param.error}"
                      class="w3-container w3-display-container w3-round w3-theme-l9 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l9 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span><br/>
+            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l9 w3-display-topright">
+            <i class="fa fa-remove"></i>
+            </span><br/>
                     <strong>Error!</strong> There was an error, please try again.<br/><br/>
                 </div>
                 <div th:if="${param.addednew}"
                      class="w3-container w3-display-container w3-round w3-theme-l1 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l8 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span><br/>
-                    <strong>Success!</strong> You registered in MoodleBox.<br/><br/>
+            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l8 w3-display-topright">
+            <i class="fa fa-remove"></i>
+            </span><br/>
+                    <strong>Success!</strong> You are registered in the MoodleBox.<br/><br/>
                 </div>
                 <hr class="w3-clear">
                 <div class="w3-col m6">
@@ -263,10 +269,6 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
-
-
-
 
 
 </script>
