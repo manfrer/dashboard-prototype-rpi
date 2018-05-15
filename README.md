@@ -42,7 +42,7 @@ Later on, and **as a future work** we are going to improve our prototype by addi
 -	**“my account”** option: where the user will be able to change his/her name, password, or even image.
 -	**"about us"** option: which is one page displays our team, as a part of R{c}, the goal and future perspective for our community.
 
-A **demo** of our Dashboard APP can be found **here**:
+A **[demo of our Dashboard APP can be found here](https://youtu.be/lBuhDjpkuLk)**
 
 **The CS50 final project has been done with a collaboration between:**
 
